@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorSystem</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- 设置ActionMode显示在Toolbar位置 -->
+        <item name="windowActionModeOverlay">true</item>
+        <!-- 设置ActionMode的背景色 -->
+        <item name="actionModeBackground">@color/colorSystem</item>
+        <!-- 设置ActionMode上的字体颜色 -->
+        <item name="android:textColorPrimary">@color/colorWhite</item>
+    </style>
+
+    <!-- 设置Toolbar菜单文本上的字体颜色 -->
+    <style name="AppTheme.Toolbar" parent="Widget.AppCompat.ActionBar">
+        <item name="actionMenuTextColor">@color/colorWhite</item>
+    </style>
+</resources>

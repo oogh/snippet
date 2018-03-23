@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Snippet</string>
+    <string name="delete">删除</string>
+
+    <string-array name="titles">
+        <item>Local</item>
+        <item>Remote</item>
+    </string-array>
+</resources>
