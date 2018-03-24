@@ -39,12 +39,12 @@ public class SnippetRecyclerAdapter extends RecyclerView.Adapter<SnippetRecycler
     public SnippetRecyclerAdapter(Context context, List<Snippet> dataSet) {
         mContext = context;
         mDataSet = dataSet;
+        mSelectedItems = new SparseBooleanArray();
     }
 
     public void updateDataSet(List<Snippet> dataSet) {
         mDataSet = dataSet;
         notifyDataSetChanged();
-        mSelectedItems = new SparseBooleanArray();
     }
 
     @Override

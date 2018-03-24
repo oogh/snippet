@@ -163,7 +163,7 @@ public class TabLocalFragment extends Fragment implements Actionable {
         }
         mAdapter.notifyDataSetChanged();
         Toast.makeText(getContext(), selectedItems.size() + " 条数据已被删除", Toast.LENGTH_SHORT).show();
-        mAdapter.clearSelectedItems();
+//        mAdapter.clearSelectedItems();
         mActionMode.finish();
     }
 
