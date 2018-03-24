@@ -4,6 +4,8 @@
 
 
 
+## 项目说明
+
 ### 1. 不同项目对应不同的分支
 
 - 主分支:  *master*
@@ -21,3 +23,10 @@
 git clone -b snippet_18_03_24 https://github.com/oogh/snippet.git
 ```
 
+
+
+## 项目集合
+
+### 1. [snippet_18_03_24](https://github.com/oogh/snippet/tree/snippet_18_03_24)
+
+​	MVP + RecyclerView + GestureDetector + ButterKnife + EventBus + ActionMode + ...
