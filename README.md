@@ -30,3 +30,17 @@ git clone -b snippet_18_03_24 https://github.com/oogh/snippet.git
 ### 1. [snippet_18_03_24](https://github.com/oogh/snippet/tree/snippet_18_03_24)
 
 ​	MVP + RecyclerView + GestureDetector + ButterKnife + EventBus + ActionMode + ...
+
+## 其他
+
+> 创建本地仓库，分支并push到远程仓库
+
+```shell
+git init
+git checout -b <Branch Name>
+git remote add origin <Remote Address>
+git add .
+git commit -m "<Message Something>"
+git push -u origin <Branch Name>
+```
+
