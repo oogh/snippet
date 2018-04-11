@@ -31,6 +31,10 @@ git clone -b snippet_18_03_24 https://github.com/oogh/snippet.git
 
 ​	MVP + RecyclerView + GestureDetector + ButterKnife + EventBus + ActionMode + ...
 
+### 2. [snnipet_18_04_11](https://github.com/oogh/snippet/tree/snnipet_18_04_11)
+
+​	Android 中点击空白位置 隐藏软键盘
+
 ## 其他
 
 > 创建本地仓库，分支并push到远程仓库
