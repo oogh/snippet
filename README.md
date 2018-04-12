@@ -35,6 +35,17 @@ git clone -b snippet_18_03_24 https://github.com/oogh/snippet.git
 
 ​	Android 中点击空白位置 隐藏软键盘
 
+### 3. [snnipet_18_04_12](https://github.com/oogh/snippet/tree/snnipet_18_04_12)
+
+​	Java将阿拉伯数字转换成大写字母，并正确拼读，eg:
+
+```html
+输入: 1024
+输出: 一千零二十四 (可根据需要更改大写方式, 如可写成：壹仟零贰拾肆)
+```
+
+> 注: 暂只支持 Integer
+
 ## 其他
 
 > 创建本地仓库，分支并push到远程仓库
