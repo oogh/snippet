@@ -35,7 +35,7 @@ git clone -b snippet_18_03_24 https://github.com/oogh/snippet.git
 
 ​	Android 中点击空白位置 隐藏软键盘
 
-### 3. [snnipet_18_04_12](https://github.com/oogh/snippet/tree/snnipet_18_04_12)
+### 3. [snippet_18_04_12](https://github.com/oogh/snippet/tree/snippet_18_04_12)
 
 ​	Java将阿拉伯数字转换成大写字母，并正确拼读，eg:
 
