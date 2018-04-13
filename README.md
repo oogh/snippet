@@ -50,12 +50,11 @@ git clone -b snippet_18_03_24 https://github.com/oogh/snippet.git
 
 ​	在Kotlin中如何使用lambda风格的回调
 
-    ```kotlin
+```kotlin
 repository.loadData { dataSet -> {
     // do something ...
 }}
-    ```
-
+```
 - **功能描述**
 
   *销售商* 从 *仓库* 拿货销售，*货物* 在 *工厂* 中生产
