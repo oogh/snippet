@@ -46,13 +46,69 @@ git clone -b snippet_18_03_24 https://github.com/oogh/snippet.git
 
 > 注: 暂只支持 Integer
 
+### 4. [snippet_18_04_13](https://github.com/oogh/snippet/tree/snippet_18_04_13)
+
+​	在Kotlin中如何使用lambda风格的回调
+
+    ```kotlin
+repository.loadData { dataSet -> {
+    // do something ...
+}}
+    ```
+
+- **功能描述**
+
+  *销售商* 从 *仓库* 拿货销售，*货物* 在 *工厂* 中生产
+
+
+- **callback**
+
+  - 角色: 物流人员
+
+  - *销售商(Seller)* 派 *物流人员(Callback)* 去 *仓库中(Repository)* 取货 
+
+    ```java
+    // Seller类中
+    repository.loadData(new OnDataLoadedCallback(){// 派遣 callback 去取货
+       @Override
+        public void onDataLoaded(List<String> dataSet){
+            // callback拿到货后，运回来
+        }
+    });
+    ```
+
+  - *仓库(Repository)* 从 *工厂(Factory)* 得到 *货物(dataSet)* 以后交给 *物流人员(Callback)*
+
+    ```java
+    // Repository类中
+    public void loadData(OnDataLoadedCallback callback){ // 接收一个物流人员
+        callback.onDataLoaded(Factory.generateData()); // 让物流人员把货运回去
+    }
+    ```
+
+- **kotlin写法**
+
+  ```kotlin
+  // Seller类中
+  repository.loadData(dataSet -> {
+      // 拿到获货物以后
+  })
+  ```
+
+  ```kotlin
+  // Repository类中
+  fun loadData(callback : (dataSet : List<String>) -> Unit) {
+      callback.invoke(Factory.generateData())
+  }
+  ```
+
 ## 其他
 
 > 创建本地仓库，分支并push到远程仓库
 
 ```shell
 git init
-git checout -b <Branch Name>
+git checkout -b <Branch Name>
 git remote add origin <Remote Address>
 git add .
 git commit -m "<Message Something>"
