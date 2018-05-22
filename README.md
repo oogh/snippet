@@ -114,3 +114,16 @@ git commit -m "<Message Something>"
 git push -u origin <Branch Name>
 ```
 
+> Git 邮箱问题
+>
+> 【描述】：未配置全局邮箱时，git commit后会有一个提示，自动配置一个邮箱，那往往不是我们想要的。
+
+```shell
+# 1. 输入命令，打开配置文件，去掉注释，配置邮箱
+git config --global --edit
+# 2. 更新已提交的内容的邮箱设置
+git commit --amend --reset-author
+```
+
+
+
