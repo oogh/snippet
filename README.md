@@ -125,5 +125,16 @@ git config --global --edit
 git commit --amend --reset-author
 ```
 
+> Git 删除远程分支
+
+```shell
+# 查看远程分支
+git branch -r
+
+# 删除远程分支
+git branch -r -d origin/<branch-name>
+git push origin :<branch-name>
+```
+
 
 
