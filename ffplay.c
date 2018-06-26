@@ -340,24 +340,6 @@ static const struct TextureFormatEntry {
         {AV_PIX_FMT_NONE,           SDL_PIXELFORMAT_UNKNOWN},
 };
 
-static inline
-int cmp_audio_fmts(enum AVSampleFormat fmt1, int64_t channel_count1,
-                   enum AVSampleFormat fmt2, int64_t channel_count2) {
-    /* If channel count == 1, planar and non-planar formats are the same */
-    if (channel_count1 == 1 && channel_count2 == 1)
-        return av_get_packed_sample_fmt(fmt1) != av_get_packed_sample_fmt(fmt2);
-    else
-        return channel_count1 != channel_count2 || fmt1 != fmt2;
-}
-
-static inline
-int64_t get_valid_channel_layout(int64_t channel_layout, int channels) {
-    if (channel_layout && av_get_channel_layout_nb_channels(channel_layout) == channels)
-        return channel_layout;
-    else
-        return 0;
-}
-
 static int packet_queue_put_private(PacketQueue *q, AVPacket *pkt) {
     MyAVPacketList *pkt1;
 
@@ -1209,10 +1191,6 @@ static void do_exit(VideoState *is) {
     SDL_Quit();
     av_log(NULL, AV_LOG_QUIET, "%s", "");
     exit(0);
-}
-
-static void sigterm_handler(int sig) {
-    exit(123);
 }
 
 static void set_default_window_size(int width, int height, AVRational sar) {
