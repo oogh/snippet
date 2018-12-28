@@ -108,9 +108,9 @@ repository.loadData { dataSet -> {
 ```shell
 git init
 git checkout -b <Branch Name>
-git remote add origin <Remote Address>
 git add .
 git commit -m "<Message Something>"
+git remote add origin <Remote Address>
 git push -u origin <Branch Name>
 ```
 
@@ -134,6 +134,24 @@ git branch -r
 # 删除远程分支
 git branch -r -d origin/<branch-name>
 git push origin :<branch-name>
+```
+
+> Git修改分支名称
+
+```shell
+# 思路：修改本地分支名称  ->  删除远程分支  ->  推送本地分支
+
+# 修改本地分支名称
+git branch -m oldName newName
+
+# 删除远程分支
+git push --delelte origin oldName
+
+# 推送本地分支
+git push origin newName
+
+# 关联本地分支和远程分支(可选)
+git branch --set-upstream-to origin/newName
 ```
 
 
