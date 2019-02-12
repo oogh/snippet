@@ -145,7 +145,7 @@ git push origin :<branch-name>
 git branch -m oldName newName
 
 # 删除远程分支
-git push --delelte origin oldName
+git push -d origin oldName
 
 # 推送本地分支
 git push origin newName
